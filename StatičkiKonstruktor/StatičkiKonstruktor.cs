@@ -7,13 +7,13 @@ namespace Vsite.CSharp
 {
     class SaStatičkimKonstruktorom1
     {
-        // TODO: U klasu dodati prazni konstruktor koji će ispisati poruku "SaStatičkimKonstruktorom1.KonstruktorKlase"
+        public SaStatičkimKonstruktorom1() {
+            Console.WriteLine("SaStatičkimKonstruktorom1.KonstruktorKlase");
+        }
 
-
-        // TODO: U klasu dodati statički konstruktor koji će ispisati poruku "SaStatičkimKonstruktorom1.StatičkiKonstruktor"
-
-
-        // TODO: Pokrenuti program i pogledati ispis
+        static SaStatičkimKonstruktorom1() {
+            Console.WriteLine("SaStatičkimKonstruktorom1.StatičkiKonstruktor");
+        }
 
         public static void Metoda1()
         {
@@ -25,9 +25,15 @@ namespace Vsite.CSharp
     {
         // TODO: U klasu dodati prazni konstruktor koji će ispisati poruku "SaStatičkimKonstruktorom2.KonstruktorKlase"
 
-
+        public SaStatičkimKonstruktorom2() {
+            Console.WriteLine("SaStatičkimKonstruktorom2.KonstruktorKlase");
+        }
         // TODO: U klasu dodati statički konstruktor koji će ispisati poruku "SaStatičkimKonstruktorom2.StatičkiKonstruktor"
 
+        static SaStatičkimKonstruktorom2()
+        {
+            Console.WriteLine("SaStatičkimKonstruktorom2.StatičkiKonstruktor");
+        }
 
         // TODO: Ponovno pokrenuti program i pogledati ispis
 
