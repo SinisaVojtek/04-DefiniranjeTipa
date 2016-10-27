@@ -5,16 +5,28 @@ using System.Text;
 
 namespace Vsite.CSharp
 {
-    // TODO: Prekopirati kod klase iz prethodnog primjera i promijeniti pravo pristupa članu "broj" u public
     class MojaKlasa
     {
+        
+            public int broj = 5;
 
+            public void IspišiČlan()
+            {
+                Console.WriteLine(broj);
+            }
+        
     }
 
-    // TODO: Prekopirati kod strukture iz prethodnog primjera i promijeniti pravo pristupa članu "tekst" u public
     struct MojaStruktura
     {
+        public string tekst;
 
+        public MojaStruktura(string tekst) { this.tekst = tekst; }
+
+        public void IspišiČlan()
+        {
+            Console.WriteLine(tekst);
+        }
 
     }
 
@@ -24,30 +36,34 @@ namespace Vsite.CSharp
         {
             MojaKlasa mk1 = new MojaKlasa();
             MojaKlasa mk2 = mk1;
-            // TODO: Napisati naredbe koje pozivaju metodu IspišiČlan za obje instance.
 
+            Console.WriteLine(mk1.broj);
+            Console.WriteLine(mk2.broj);
 
             Console.WriteLine();
-            // TODO: Otkomentirati donju naredbu.
-            //mk2.broj = 2;
-            // TODO: Ponovno pozvati metodu IspišiČlan za obje instance te obrazložiti rezultat.
 
+            mk2.broj = 2;
+
+            Console.WriteLine(mk1.broj);
+            Console.WriteLine(mk2.broj);
 
         }
 
         public static void IspišiStrukture()
         {
-            // TODO: Promijeniti poziv konstruktora tako da ispis bude "MojaStruktura"
-            MojaStruktura ms1 = new MojaStruktura();
-            MojaStruktura ms2 = ms1;
-            // TODO: Pozvati metodu IspišiČlan za obje instance
 
+            MojaStruktura ms1 = new MojaStruktura("Moja struktura");
+            MojaStruktura ms2 = ms1;
+
+            Console.WriteLine(ms1.tekst);
+            Console.WriteLine(ms2.tekst);
 
             Console.WriteLine();
-            // TODO: Otkomentirati donju naredbu.
-            //ms2.tekst = "MyStruct";
-            // TODO: Ponovno pozvati metodu IspišiČlan za obje instance te obrazložiti rezultat.
 
+            ms2.tekst = "MyStruct";
+
+            Console.WriteLine(ms1.tekst);
+            Console.WriteLine(ms2.tekst);
 
         }
 
