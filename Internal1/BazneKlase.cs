@@ -10,7 +10,7 @@ namespace Vsite.CSharp
         }
     }
 
-    class Bazna
+public  class Bazna
     {
         public void IspišiMe()
         {
