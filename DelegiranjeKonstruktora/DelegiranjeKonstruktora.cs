@@ -4,6 +4,8 @@ namespace Vsite.CSharp
 {
     class Bazna
     {
+        public Bazna() { A = 5; }
+
         protected Bazna(int a) // konstruktor je protected!
         {
             A = a;
@@ -28,7 +30,8 @@ namespace Vsite.CSharp
         public static void StvoriInstancuBazneKlase()
         {
             // TODO: Stvoriti instancu klase Bazna i ispisati vrijednost člana A.
-
+            Bazna b = new CSharp.Bazna();
+            Console.WriteLine(b.A);
         }
 
         public static void StvoriInstancuIzvedeneKlasePraznimKonstruktorom()

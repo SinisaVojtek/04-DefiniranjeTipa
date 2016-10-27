@@ -12,7 +12,7 @@ namespace Vsite.CSharp
     {
         public static void IspišiTrenutniDatumVrijeme()
         {
-            Console.WriteLine(DateTime.Now);
+            Console.WriteLine(DateTime.Now.ToString());
         }
 
         public static void IspišiDanašnjiDatum()
