@@ -7,25 +7,28 @@ namespace Vsite.CSharp
         public readonly string Ime;
         public readonly string Prezime;
         public readonly DateTime DatumRođenja;
+        public Osoba() { }
+        public Osoba(string ime, string prezime, DateTime datum) { this.Ime = ime; this.Prezime = prezime; this.DatumRođenja = datum; }
     }
 
     public class KonstruktorKlase
     {
         public static void StvoriObjektPodrazumijevanimKonstruktorom()
         {
-            // TODO: Stvoriti objekt klase Osoba i ispisati vrijednosti članova Ime, Prezime, DatumRođenja
+            Osoba O = new Osoba();
 
-
-            // TODO: U klasu Osoba dodati prazni konstruktor koji inicijalizira članove objekta na neku vrijednost, ponovno pokrenuti program i provjeriti ispis.
-
+            Console.WriteLine(O.Ime);
+            Console.WriteLine(O.Prezime);
+            Console.WriteLine(O.DatumRođenja);
 
         }
 
         public static void StvoriObjektZadanimKonstruktorom(string ime, string prezime, DateTime datumRođenja)
         {
-            // TODO: U klasi Osoba promijeniti prazan konstruktor tako da prima 3 argumenta (ime, prezime, datumRođenja) kojima se inicijaliziraju članovi objekta.
-            // TODO: Stvoriti objekt klase Osoba pozivom tog konstruktora i ispisati vrijednosti članova Ime, Prezime, DatumRođenja
-
+            Osoba O2 = new CSharp.Osoba(ime, prezime, datumRođenja);
+            Console.WriteLine(O2.Ime);
+            Console.WriteLine(O2.Prezime);
+            Console.WriteLine(O2.DatumRođenja);
 
         }
 
