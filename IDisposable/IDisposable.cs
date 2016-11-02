@@ -3,18 +3,15 @@ using System.IO;
 
 namespace Vsite.CSharp
 {
-    public class Disposable
+    public class Disposable 
     {
         public static void StvaranjeIPisanjeUDatoteku(string imeDatoteke)
         {
             StreamWriter sw = new StreamWriter(imeDatoteke);
             sw.WriteLine("Ovo je moj upis");
-            // TODO: Pokrenuti program i pogledati ispis.
 
-            // TODO: Dodati poziv metode StreamWriter.Dispose (ili StreamWriter.Close) te ponovno pokrenuti program.
-
-            // TODO: Preraditi kod metode tako da se umjesto metode Dispose koristi blok using
-
+            sw.Dispose();
+           
         }
 
         public static void BrisanjeDatoteke(string imeDatoteke)
