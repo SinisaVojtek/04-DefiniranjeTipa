@@ -15,7 +15,9 @@ namespace Vsite.CSharp
             Debug.WriteLine(poruka);
         }
 
-        ~ KlasaSDestruktorom() { Console.WriteLine("Destruktor objekta br. {0}", RedniBroj); Debug.WriteLine("Destruktor objekta br. {0}.", RedniBroj); }
+        ~ KlasaSDestruktorom() {
+            Console.WriteLine("Destruktor objekta br. {0}", RedniBroj);
+            Debug.WriteLine("Destruktor objekta br. {0}.", RedniBroj); }
 
         public readonly int RedniBroj; // redni broj objekta
 
@@ -31,7 +33,8 @@ namespace Vsite.CSharp
                 KlasaSDestruktorom ksd = new KlasaSDestruktorom();
             }
 
-            for (int i = 0; i < 5000; ++i) {
+            for (int i = 0; i < 100000; ++i)
+            {
                 KlasaSDestruktorom kld = new KlasaSDestruktorom();
             }
             Console.WriteLine("GOTOVO!!!");
